@@ -6,6 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "standard"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neilom/clean-node-api.git"
@@ -16,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/Neilom/clean-node-api/issues"
   },
-  "homepage": "https://github.com/Neilom/clean-node-api#readme"
+  "homepage": "https://github.com/Neilom/clean-node-api#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "standard": "^17.1.0"
+  }
 }
